@@ -5,6 +5,7 @@ def test_number():
     assert 2 == 2 
     assert 2 == 2 
     assert 3 == 3 
+    assert 19 + 1 == 20 
     
 # def test_ping():
 #     #and then check the response...
