@@ -1,7 +1,12 @@
 
 pipeline {
 
-  agent none
+  agent {
+          docker {
+            image 'python:3.8-slim-buster'
+            args '-u 0:0 -v /tmp:/root/.cache'
+          }
+      }
 
   environment {
     DOCKER_IMAGE = "erikhorus1249/fastapi-docker"
@@ -9,12 +14,7 @@ pipeline {
 
   stages {
     stage("Test") {
-      agent {
-          docker {
-            image 'python:3.8-slim-buster'
-            args '-u 0:0 -v /tmp:/root/.cache'
-          }
-      }
+      
       steps {
         sh "pip install poetry"
         sh "poetry install"
@@ -23,7 +23,7 @@ pipeline {
     }
 
     stage("Build") {
-      agent { node {label 'master'}}
+      // agent { node {label 'master'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
       }
