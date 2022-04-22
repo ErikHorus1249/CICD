@@ -13,7 +13,8 @@ WORKDIR /code
 # RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 # volume app dir
-COPY ./app /code/app
+COPY ./ /code
+
 
 RUN poetry install
 
