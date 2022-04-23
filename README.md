@@ -177,7 +177,7 @@ $ docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):$(w
  ┗ 📜pyproject.toml
 ```
 - Đường dẫn tham khảo source code dự án: **[Github](https://github.com/ErikHorus1249/CICD/tree/develop)**
-#### 3.2.1. Kiểm tra wwebhook đã được thêm vào Github repository chưa
+#### 3.2.1. Kiểm tra wwebhook đã được thêm vào Github repository chưa.
 - Tại chọn **Settings**.
 
 ![](https://i.imgur.com/L4N3GYc.jpg)
@@ -202,7 +202,6 @@ $ docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):$(w
 - [File-tree-extension](https://marketplace.visualstudio.com/items?itemName=Shinotatwu-DS.file-tree-generator)
 - [Imgur](https://imgur.com)
 - [Stackedit](https://stackedit.io)
-
 
 
 
